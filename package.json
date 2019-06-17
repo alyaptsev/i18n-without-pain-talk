@@ -41,7 +41,8 @@
     "start": "shower serve",
     "prepare": "shower prepare --files '**' --files '!{docs,node_modules,prepared}{,/**}' --files '!*.{md,toml,json}'",
     "archive": "shower archive --files '**' --files '!{docs,node_modules,prepared}{,/**}' --files '!*.{md,toml,json}'",
-    "publish": "gh-pages -d prepared",
+    "deploy": "gh-pages -d prepared",
+    "publish": "npm run prepare && npm run deploy",
     "test": "npm run prepare && ls prepared && npm run archive && path-exists archive.zip"
   }
 }
