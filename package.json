@@ -32,15 +32,16 @@
     "shower-core": "^2.1.0"
   },
   "devDependencies": {
-    "path-exists-cli": "^1.0.0",
-    "@shower/cli": "^0.2.6"
+    "@shower/cli": "^0.2.6",
+    "gh-pages": "^2.0.1",
+    "path-exists-cli": "^1.0.0"
   },
   "scripts": {
     "pdf": "shower pdf",
     "start": "shower serve",
     "prepare": "shower prepare --files '**' --files '!{docs,node_modules,prepared}{,/**}' --files '!*.{md,toml,json}'",
     "archive": "shower archive --files '**' --files '!{docs,node_modules,prepared}{,/**}' --files '!*.{md,toml,json}'",
-    "publish": "shower publish --files '**' --files '!{docs,node_modules,prepared}{,/**}' --files '!*.{md,toml,json}'",
+    "publish": "gh-pages -d prepared",
     "test": "npm run prepare && ls prepared && npm run archive && path-exists archive.zip"
   }
 }
