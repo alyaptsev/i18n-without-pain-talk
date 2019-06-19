@@ -76,7 +76,7 @@
         </style>
     </section>
 
-    <section class="slide" id="workflow-given">
+    <section class="slide workflow">
         <h2>Workflow</h2>
         <ol>
             <li class="next">Design</li>
@@ -84,42 +84,9 @@
             <li class="next">Code</li>
             <li class="next">Production</li>
         </ol>
-        <style>
-            #workflow-given ol {
-                display: flex;
-                justify-content: center;
-                margin-top: 150px;
-            }
-            #workflow-given li {
-                font-size: 40px;
-            }
-            #workflow-given li:not(:first-child) {
-                margin-left: 90px;
-            }
-            #workflow-given li::before {
-                content: "→";
-                color: var(--text);
-            }
-            #workflow-given li:first-child::before {
-                display: none;
-            }
-            #workflow-given li.unicorn::before {
-                display: none;
-            }
-            #workflow-given li.unicorn {
-                --icon-width: 350px;
-
-                width: var(--icon-width);
-                height: var(--icon-width);
-                margin: 0;
-                background-image: url(pictures/unicorn.svg);
-                position: absolute;
-                top: 34%;
-            }
-        </style>
     </section>
 
-    <section class="slide" id="workflow-given">
+    <section class="slide workflow">
         <h2>Workflow</h2>
         <ol>
             <li>Design</li>
@@ -195,9 +162,9 @@
         </style>
     </section>
 
-    <section class="slide" id="workflow-next">
+    <section class="slide workflow" id="workflow-next">
         <h2>First approach workflow</h2>
-        <ol>
+        <ol style="margin-top: 140px;">
             <li class="next">Design</li>
             <li class="next">TMS-branch</li>
             <li class="next">Code-branch</li>
@@ -206,18 +173,11 @@
             <li class="next cli">+ <b>CLI</b></li>
         </ol>
         <style>
-            #workflow-next ol {
-                display: flex;
-                justify-content: center;
-                margin-top: 140px;
+            #workflow-next li {
+                font-size: 25px;
             }
             #workflow-next li::before {
-                content: "→";
-                color: var(--text);
                 transform: translateX( calc(-100% - 0.8em) );
-            }
-            #workflow-next li:first-child::before {
-                display: none;
             }
             #workflow-next li:not(:first-child) {
                 margin-left: 75px;
@@ -228,33 +188,22 @@
                 top: 63%;
                 font-size: 45px;
             }
-            #workflow-next li.unicorn {
-                --icon-width: 350px;
-
-                width: var(--icon-width);
-                height: var(--icon-width);
-                margin: 0;
-                background-image: url(pictures/unicorn.svg);
-                position: absolute;
-                top: 34%;
-            }
-            #workflow-next li.cli::before,
-            #workflow-next li.unicorn::before {
+            #workflow-next li.cli::before {
                 display: none;
             }
         </style>
     </section>
 
-    <section class="slide" id="workflow-next">
+    <section class="slide workflow" id="workflow-next">
         <h2>First approach workflow</h2>
-        <ol>
+        <ol style="margin-top: 140px;">
             <li>Design</li>
             <li>TMS-branch</li>
             <li>Code-branch</li>
             <li>Merge</li>
             <li>Production</li>
             <li class="cli">+ <b>CLI</b></li>
-            <li class="unicorn"></li>
+            <li class="unicorn" style="margin: 0"></li>
         </ol>
     </section>
 
@@ -264,16 +213,8 @@
         </figure>
     </section>
 
-    <section class="slide" id="react">
+    <section class="slide center">
         <p>But React happened...</p>
-        <style>
-            #react p {
-                text-align: center;
-                margin-top: 180px;
-                font-size: 40px;
-                text-transform: uppercase;
-            }
-        </style>
     </section>
 
     <section class="slide" id="problems">
@@ -331,13 +272,15 @@
         </style>
     </section>
 
-    <section class="slide" id="react">
+    <section class="slide">
         <h2>Bonus requirement</h2>
-        <p>Keys is not a developers responsibility</p>
+        <p style="text-align: center; margin-top: 165px; font-size: 40px;">
+            Keys is not a developers responsibility
+        </p>
     </section>
 
     <section class="slide" id="solutions">
-        <h2>Second approach</h2>
+        <h2 style="margin-bottom: 90px;">Second approach</h2>
         <p>js-lingui</p>
         <p>i18next</p>
         <style>
@@ -391,6 +334,7 @@
         <style>
             #comparision .check {
                 width: 30px;
+                margin-bottom: -7px;
             }
         </style>
     </section>
@@ -420,6 +364,10 @@
         </style>
     </section>
 
+    <section class="slide center">
+        <p>Keyless approach</p>
+    </section>
+
     <section class="slide">
         <figure>
             <img class="cover" src="pictures/macros.png" alt="What js-lingui macros do">
@@ -428,7 +376,13 @@
 
     <section class="slide">
         <figure>
-            <img class="cover" src="pictures/js-macros.png" alt="Javascript macros API">
+            <img class="cover" src="pictures/plural-macros.png" alt="Javascript plural macros">
+        </figure>
+    </section>
+
+    <section class="slide">
+        <figure>
+            <img class="cover" src="pictures/select-macros.png" alt="Javascript select macros">
         </figure>
     </section>
 
@@ -444,31 +398,36 @@
         </figure>
     </section>
 
-    <section class="slide" id="workflow-given">
+    <section class="slide">
+        <h2>Keyless caveat</h2>
+        <p style="text-align: center; margin-top: 155px; font-size: 40px;">New text is new key</p>
+    </section>
+
+    <section class="slide workflow" id="workflow-final">
         <h2>Workflow</h2>
-        <ol>
+        <ol style="margin-top: 130px;">
             <li class="next">Design</li>
             <li class="next">Code</li>
             <li class="next">Production</li>
             <li class="next ci">+ sync with TMS in <b>CI</b></li>
             <style>
-                #workflow-given li.ci {
+                #workflow-final li.ci {
                     position: absolute;
                     left: 30%;
-                    top: 63%;
+                    top: 60%;
                     font-size: 45px;
                     margin: 0
                 }
-                #workflow-given li.ci::before {
+                #workflow-final li.ci::before {
                     display: none;
                 }
             </style>
         </ol>
     </section>
 
-    <section class="slide" id="workflow-given">
+    <section class="slide workflow" id="workflow-final">
         <h2>Workflow</h2>
-        <ol>
+        <ol style="margin-top: 130px;">
             <li>Design</li>
             <li>Code</li>
             <li>Production</li>
@@ -489,8 +448,14 @@
         </figure>
     </section>
 
-    <section class="slide" id="react">
-        <p>What if we could control key generation</p>
+    <section class="slide">
+        <figure>
+            <img class="cover" src="pictures/error.gif" alt="You died">
+        </figure>
+    </section>
+
+    <section class="slide center">
+        <p style="font-size: 38px;">What if we could control key generation</p>
     </section>
 
     <section class="slide">
@@ -505,7 +470,7 @@
         </figure>
     </section>
 
-    <section class="slide" id="react">
+    <section class="slide center">
         <p>It's not a success story</p>
     </section>
 
@@ -518,10 +483,10 @@
     <section class="slide" id="results">
         <h2>As a result</h2>
         <ol>
-            <li>You can forget about working with TMS by CI/CD scripts</li>
-            <li>js-lingui is a good lightweight i18n-lib</li>
-            <li>Keyless approach is good if default transltions is ok for your users</li>
-            <li>Keyless approach is good if your i18n-lib has custom key generation support</li>
+            <li class="next">You can forget about working with TMS</li>
+            <li class="next">js-lingui is a good lightweight i18n-lib</li>
+            <li class="next">Keyless approach is good if default translations is ok for your users</li>
+            <li class="next">Keyless approach is good if your i18n-lib has custom key generation support</li>
         </ol>
         <style>
             #results li {
@@ -530,34 +495,17 @@
         </style>
     </section>
 
-    <section class="slide" id="qr">
-        <h2>This presentation</h2>
-        <figure>
-            <img class="cover" src="pictures/qr-code.png" alt="QR-code of these slides">
-        </figure>
-        <style>
-            #qr img {
-                max-height: 70%;
-                top: 60%;
-            }
-        </style>
-    </section>
-
-    <section class="slide" id="contacts">
+    <section class="slide">
         <h2>Contacts</h2>
-        <p>Github: <a href="https://github.com/alyaptsev">https://github.com/alyaptsev</a></p>
-        <p>Telegram: <a href="https://t.me/antonlyaptsev">@antonlyaptsev</a></p>
-        <style>
-            #contacts p {
-                text-align: center;
-                font-size: 30px;
-                margin-top: 70px;
-            }
-        </style>
-    </section>
-
-    <section class="slide" id="react">
-        <p>Questions?</p>
+        <div class="columns two">
+            <div>
+                <img src="pictures/qr.png" alt="QR-code of these slides" style="width: 100%;">
+            </div>
+            <div style="display: flex; flex-direction: column; justify-content:center;">
+                <p>Github: <a href="https://github.com/alyaptsev">github.com/alyaptsev</a></p>
+                <p>Telegram: <a href="https://t.me/antonlyaptsev">@antonlyaptsev</a></p>
+            </div>
+        </div>
     </section>
 
     <div class="progress"></div>
