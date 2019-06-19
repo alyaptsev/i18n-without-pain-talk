@@ -1,8 +1,8 @@
 .shower {
     --slide-ratio: calc(16 / 9);
     --progress-size: 7px;
-    --title: #be56ce;
-    --text: #b7b7b7;
+    --title: #d587eb;
+    --text: #d6d6d6;
     --background: #282c35;
 
     color: var(--text);
