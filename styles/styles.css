@@ -95,3 +95,12 @@
     position: absolute;
     top: 34%;
 }
+
+@media print {
+    .shower {
+        transform: none !important;
+    }
+    .shower.full .next {
+        visibility: visible;
+    }
+}
